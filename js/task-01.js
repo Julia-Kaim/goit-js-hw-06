@@ -48,3 +48,20 @@
 // Category: Technologies
 // Elements: 5
 
+const findh2 = document.querySelectorAll("h2");
+console.log([...findh2]);
+const count = document.querySelectorAll("li.item");
+console.log([...count].length);
+
+// wyszukanie wszystkich li
+const findList = document.querySelectorAll("li.item ul li");
+console.log([...findList].length);
+// 12
+
+const findh2 = document.querySelectorAll("h2");
+console.log([...findh2]);
+const count = document.querySelectorAll("li.item");
+console.log([...count].length);
+
+const findList = document.querySelectorAll("li.item ul li");
+console.log([...findList].length);
