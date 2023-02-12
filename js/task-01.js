@@ -73,7 +73,7 @@ const findItem = findCategory.querySelector("li.item");
 const itemArray = [];
 itemArray.push(findItem);
 console.log([...itemArray]);
-console.log(`Number of categories: ${findItem.length}`);
+console.log(`Number of categories: ${itemArray.length}`);
 
 itemArray.forEach((category) => {
 	const header = category.querySelector("h2");
