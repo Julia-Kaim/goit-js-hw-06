@@ -48,20 +48,37 @@
 // Category: Technologies
 // Elements: 5
 
-const findh2 = document.querySelectorAll("h2");
-console.log([...findh2]);
-const count = document.querySelectorAll("li.item");
-console.log([...count].length);
+// const findh2 = document.querySelectorAll("h2");
+// console.log([...findh2]);
+// const count = document.querySelectorAll("li.item");
+// console.log([...count].length);
 
-// wyszukanie wszystkich li
-const findList = document.querySelectorAll("li.item ul li");
-console.log([...findList].length);
-// 12
+// // wyszukanie wszystkich li
+// const findList = document.querySelectorAll("li.item ul li");
+// console.log([...findList].length);
+// // 12
 
-const findh2 = document.querySelectorAll("h2");
-console.log([...findh2]);
-const count = document.querySelectorAll("li.item");
-console.log([...count].length);
+// const findh2 = document.querySelectorAll("h2");
+// console.log([...findh2]);
+// const count = document.querySelectorAll("li.item");
+// console.log([...count].length);
+// const findItems = document.querySelectorAll(" li.item ul li");
+// console.log([...findItems]);
+// const findList = document.querySelectorAll("li.item ul li");
+// console.log([...findList].length);
 
-const findList = document.querySelectorAll("li.item ul li");
-console.log([...findList].length);
+const findCategory = document.querySelector("ul#categories");
+
+const findItem = findCategory.querySelector("li.item");
+const itemArray = [];
+itemArray.push(findItem);
+console.log([...itemArray]);
+console.log(`Number of categories: ${findItem.length}`);
+
+itemArray.forEach((category) => {
+	const header = category.querySelector("h2");
+	const items = category.querySelectorAll("li");
+
+	console.log(`Category: ${header.textContent}`);
+	console.log(`Elements: ${items.length}`);
+});
