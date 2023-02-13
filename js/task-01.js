@@ -67,18 +67,12 @@
 // const findList = document.querySelectorAll("li.item ul li");
 // console.log([...findList].length);
 
-const findCategory = document.querySelector("ul#categories");
 
-const findItem = findCategory.querySelector("li.item");
-const itemArray = [];
-itemArray.push(findItem);
-console.log([...itemArray]);
-console.log(`Number of categories: ${itemArray.length}`);
+const findArrayCategories = document.querySelectorAll(".item");
 
-itemArray.forEach((category) => {
-	const header = category.querySelector("h2");
-	const items = category.querySelectorAll("li");
+console.log(`Number of categories: ${findArrayCategories.length}`);
 
-	console.log(`Category: ${header.textContent}`);
-	console.log(`Elements: ${items.length}`);
+findArrayCategories.forEach((item) => {
+	console.log(`Category: ${item.firstElementChild.textContent}`);
+	console.log(`Elements: ${item.lastElementChild.children.length}`);
 });
