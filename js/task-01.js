@@ -68,11 +68,24 @@
 // console.log([...findList].length);
 
 
-const findArrayCategories = document.querySelectorAll(".item");
+// =====================
+//  first method
+// const findArrayCategories = document.querySelectorAll(".item");
 
-console.log(`Number of categories: ${findArrayCategories.length}`);
+// console.log(`Number of categories: ${findArrayCategories.length}`);
 
-findArrayCategories.forEach((item) => {
-	console.log(`Category: ${item.firstElementChild.textContent}`);
-	console.log(`Elements: ${item.lastElementChild.children.length}`);
+// findArrayCategories.forEach((item) => {
+// 	console.log(`Category: ${item.firstElementChild.textContent}`);
+// 	console.log(`Elements: ${item.lastElementChild.children.length}`);
+// });
+
+
+// ====================
+// second method
+
+const numberOfCategories = document.querySelectorAll(".item");
+console.log(`Number of categories: ${numberOfCategories.length}`);
+numberOfCategories.forEach((item) => {
+	console.log(`Category: ${item.querySelector("h2").textContent}`);
+	console.log(`Elements: ${item.querySelectorAll("li").length}`);
 });

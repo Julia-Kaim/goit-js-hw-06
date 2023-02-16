@@ -22,24 +22,24 @@ const images = [
 // Wszystkie elementy galerii powinny być dodawane do DOM podczas jednej operacji.
 // Ulepsz galerię używając flexboxów lub gridów poprzez klasy CSS.
 
-// const gallery = document.querySelectorAll("ul");
 
 
-const galleryListEl = document.querySelector("ul");
+
+const gallery = document.querySelector("ul");
 const element = images
 	.map(({ url, alt }) => {
 		return `<li><img src = '${url}' alt = '${alt}' width="320" height="300"></li>`;
 	})
 	.join("");
-galleryListEl.insertAdjacentHTML("afterbegin", element);
+gallery.insertAdjacentHTML("afterbegin", element);
 
-// document.body.style.margin = "0px";
+gallery.style.cssText = `
+display: flex;
+align-items: center;
+justify-content: center;
+list-style-type: none;
+margin: 0;
+padding: 0;
+gap: 30px;
 
-galleryListEl.style.cssText = `display: flex;
-  align-items: center;
-  justify-content: center;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  gap: 30px;
-  `;
+`;
